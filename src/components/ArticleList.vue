@@ -10,7 +10,7 @@ import debounce from 'lodash/debounce';
 const headers = [
   { title: 'Headline', align: 'start', key: 'headline', sortable: false },
   { title: 'Published', key: 'date', align: 'end', sortable: false },
-  // { title: 'Image', key: 'image', align: 'center', sortable: false },
+  { title: 'Image', key: 'image', align: 'center', sortable: false },
   { title: 'Type', key: 'type', align: 'center', sortable: false },
   { title: 'Link', key: 'link', align: 'center', sortable: false },
   { title: 'Actions', key: 'actions', align: 'center', sortable: false }
@@ -49,7 +49,7 @@ const loadItems = ({ page = 1 } = {}) => {
     .then(({ response }) => {
       const { meta, docs } = response;
       serverItems.value = docs
-      totalItems.value = Math.min(meta.hits, 200) 
+      totalItems.value = Math.min(meta.hits, 1000) 
       loading.value = false
     })
     .catch(({ response }) => {
