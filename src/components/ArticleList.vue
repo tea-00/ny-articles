@@ -44,7 +44,7 @@ const removeItem = index => {
 const loadItems = ({ page = 1 } = {}) => {
   loading.value = true
   const params = { page: page - 1 };
-  if (searchTerm.value) params.fq = searchTerm.value;
+  if (searchTerm.value) params.fq = `headline:("${searchTerm.value}")`;
   articlesApi.fetch(params)
     .then(({ response }) => {
       const { meta, docs } = response;
