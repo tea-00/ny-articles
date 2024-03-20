@@ -1,11 +1,11 @@
 <template>
   <v-app id="app">
-    <v-navigation-drawer v-model="drawer">
+    <v-navigation-drawer v-model="drawer" width="300px">
       <v-list>
           <v-list-item
-            prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
-            subtitle="jane_doe@gmail.com"
-            title="Jane Doe"
+            prepend-avatar="@/assets/profile.jpeg"
+            subtitle="tea.juresic@fpmoz.sum.ba"
+            title="Tea Jurešić"
           ></v-list-item>
         </v-list>
 
