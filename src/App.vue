@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <v-navigation-drawer v-model="drawer" width="300px">
+    <v-navigation-drawer v-model="drawer">
       <v-list>
           <v-list-item
             prepend-avatar="@/assets/profile.jpeg"
@@ -48,3 +48,9 @@
     data: () => ({ drawer: null }),
   }
 </script>
+
+<style lang="scss" scoped>
+.v-list-item :deep(.v-list-item-subtitle) {
+  font-size: 13px;
+}
+</style>
